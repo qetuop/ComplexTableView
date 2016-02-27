@@ -20,6 +20,12 @@ public class Tag {
         setString(string);
     }
 
+    Tag(Tag get) {
+        this();
+        setId(get.getId());
+        setString(get.getString());
+    }
+
     public final Integer getId() {return id.get();}
     public final void setId(Integer value) {id.set(value);}
     public IntegerProperty idProperty() {return id;}
